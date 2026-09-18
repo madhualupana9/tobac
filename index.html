@@ -561,89 +561,219 @@
 }
 
 /* =========================================================
-   MOBILE
+   INDUSTRIAL PROCESSING CAPABILITY
+   MOBILE COUNTER FIX
    ========================================================= */
 
 @media (max-width: 767px) {
 
+    /* Keep the section within the viewport */
     .over-view-two {
-        padding-top: 50px !important;
-        padding-bottom: 50px !important;
+        width: 100% !important;
+        overflow: hidden !important;
+        padding-top: 40px !important;
+        padding-bottom: 45px !important;
     }
 
+    .over-view-two .container {
+        width: 100% !important;
+        max-width: 100% !important;
+        padding-left: 22px !important;
+        padding-right: 22px !important;
+    }
+
+    /* Main layout */
     .over-view-two-wrap {
         display: flex !important;
         flex-direction: column !important;
-        align-items: stretch !important;
-        gap: 40px !important;
+        width: 100% !important;
+        gap: 30px !important;
     }
 
+    /* Image */
     .over-view-two-image-wrap {
         width: 100% !important;
         max-width: 100% !important;
         flex: none !important;
+        min-width: 0 !important;
     }
 
     .over-view-two-image-one {
         width: 100% !important;
-        height: 380px !important;
-        max-height: 380px !important;
+        height: 300px !important;
+        max-height: 300px !important;
     }
 
-    .overview-two-image-card {
-        width: 20px !important;
-        max-width: 20px !important;
-        height: 280px !important;
-        max-height: 280px !important;
-        left: -10px !important;
-    }
-
+    /* Content */
     .over-view-information {
+        width: 100% !important;
         max-width: 100% !important;
+        min-width: 0 !important;
+    }
+
+    .over-view-information .sub-heading {
+        font-size: 12px !important;
+        line-height: 1.3 !important;
+        letter-spacing: 1px !important;
+        margin-bottom: 12px !important;
     }
 
     .over-view-information .overview-two-heading {
+        width: 100% !important;
+        margin-top: 0 !important;
         margin-bottom: 18px !important;
     }
 
     .over-view-information .overview-two-heading h2 {
-        font-size: 34px !important;
-        line-height: 1.12 !important;
+        width: 100% !important;
+        max-width: 100% !important;
+        font-size: 32px !important;
+        line-height: 1.1 !important;
         letter-spacing: -0.8px !important;
+        margin: 0 !important;
+    }
+
+    /* Description */
+    .over-view-information > .overflow-hidden {
+        width: 100% !important;
+        max-width: 100% !important;
+        overflow: visible !important;
     }
 
     .over-view-information > .overflow-hidden > p {
+        width: 100% !important;
+        max-width: 100% !important;
         font-size: 15px !important;
         line-height: 1.6 !important;
+        margin: 0 !important;
     }
+
+
+    /* =====================================================
+       COUNTERS
+       ===================================================== */
 
     .over-view-information .counter-two-wrapper {
-        margin-top: 35px !important;
+        display: grid !important;
+        grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+        width: 100% !important;
+        max-width: 100% !important;
+        margin-top: 32px !important;
+        padding: 0 !important;
+        gap: 0 !important;
+        overflow: hidden !important;
     }
 
-    .over-view-information .counter-two-number {
-        font-size: 48px !important;
-    }
-
-    .over-view-information .heading-style-h5 {
-        font-size: 15px !important;
-        line-height: 1.4 !important;
-        margin-top: 14px !important;
-    }
-
+    /* Counter cards */
     .over-view-information .counter-card-two {
-        padding-left: 18px !important;
-        padding-right: 18px !important;
+        width: 100% !important;
+        min-width: 0 !important;
+        padding: 0 12px !important;
+        margin: 0 !important;
+        display: flex !important;
+        flex-direction: column !important;
+        align-items: flex-start !important;
+        overflow: hidden !important;
     }
 
+    /* First counter */
     .over-view-information .counter-card-two.one {
         padding-left: 0 !important;
+        padding-right: 14px !important;
+        border-right: 1px solid rgba(255,255,255,0.18) !important;
     }
 
+    /* Second counter */
     .over-view-information .counter-card-two.two {
+        padding-left: 14px !important;
         padding-right: 0 !important;
+        border-right: 0 !important;
+    }
+
+
+    /* =====================================================
+       NUMBER AREA
+       ===================================================== */
+
+    .over-view-information .counter-one-wrap {
+        width: 100% !important;
+        height: 52px !important;
+        min-height: 52px !important;
+
+        display: flex !important;
+        align-items: center !important;
+        justify-content: flex-start !important;
+
+        overflow: hidden !important;
+    }
+
+    /*
+       IMPORTANT:
+       The counter uses vertically stacked digits.
+       Keep this wrapper hidden so only the active digit
+       is visible.
+    */
+    .over-view-information .counter-two-marquee-wrap {
+        width: auto !important;
+        height: 52px !important;
+        max-width: 100% !important;
+
+        display: flex !important;
+        align-items: center !important;
+
+        overflow: hidden !important;
+        flex-shrink: 0 !important;
+    }
+
+    .over-view-information .counter-two-marquee {
+        height: 52px !important;
+        width: auto !important;
+
+        display: flex !important;
+        flex-direction: column !important;
+
+        flex-shrink: 0 !important;
+        overflow: hidden !important;
+    }
+
+    /* Individual numbers */
+    .over-view-information .counter-two-number {
+        font-size: 44px !important;
+        line-height: 52px !important;
+        height: 52px !important;
+
+        font-weight: 500 !important;
+        letter-spacing: -1.5px !important;
+        white-space: nowrap !important;
+        flex-shrink: 0 !important;
+    }
+
+    /* Keep TPH / + aligned */
+    .over-view-information .counter-two-marquee:last-child {
+        margin-left: 3px !important;
+        height: 52px !important;
+    }
+
+
+    /* =====================================================
+       LABEL
+       ===================================================== */
+
+    .over-view-information .heading-style-h5 {
+        width: 100% !important;
+        max-width: 100% !important;
+
+        font-size: 13px !important;
+        line-height: 1.35 !important;
+
+        margin-top: 10px !important;
+
+        white-space: normal !important;
+        overflow-wrap: break-word !important;
+        word-break: normal !important;
     }
 }
+
 
 /* =========================================================
    SMALL MOBILE
@@ -652,29 +782,85 @@
 @media (max-width: 479px) {
 
     .over-view-two {
-        padding-top: 40px !important;
+        padding-top: 35px !important;
         padding-bottom: 40px !important;
     }
 
+    .over-view-two .container {
+        padding-left: 16px !important;
+        padding-right: 16px !important;
+    }
+
     .over-view-two-wrap {
-        gap: 32px !important;
+        gap: 25px !important;
     }
 
     .over-view-two-image-one {
-        height: 320px !important;
-        max-height: 320px !important;
+        height: 280px !important;
+        max-height: 280px !important;
     }
 
     .over-view-information .overview-two-heading h2 {
         font-size: 29px !important;
+        line-height: 1.1 !important;
+        letter-spacing: -0.6px !important;
+    }
+
+    .over-view-information > .overflow-hidden > p {
+        font-size: 14px !important;
+        line-height: 1.6 !important;
+    }
+
+
+    /* Counter container */
+    .over-view-information .counter-two-wrapper {
+        margin-top: 28px !important;
+        grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+        overflow: hidden !important;
+    }
+
+    /* Cards */
+    .over-view-information .counter-card-two.one {
+        padding-right: 10px !important;
+    }
+
+    .over-view-information .counter-card-two.two {
+        padding-left: 10px !important;
+    }
+
+    /* Number */
+    .over-view-information .counter-one-wrap {
+        height: 48px !important;
+        min-height: 48px !important;
+    }
+
+    .over-view-information .counter-two-marquee-wrap {
+        height: 48px !important;
+        overflow: hidden !important;
+    }
+
+    .over-view-information .counter-two-marquee {
+        height: 48px !important;
+        overflow: hidden !important;
     }
 
     .over-view-information .counter-two-number {
         font-size: 40px !important;
+        line-height: 48px !important;
+        height: 48px !important;
+        letter-spacing: -1px !important;
     }
 
+    .over-view-information .counter-two-marquee:last-child {
+        height: 48px !important;
+        margin-left: 2px !important;
+    }
+
+    /* Labels */
     .over-view-information .heading-style-h5 {
-        font-size: 14px !important;
+        font-size: 12px !important;
+        line-height: 1.35 !important;
+        margin-top: 8px !important;
     }
 }
 </style>
@@ -1346,7 +1532,7 @@
    --------------------------------------------------------- */
 
 .reliable-construction-bottom-container {
-    margin-top: 42px !important;
+    margin-top: 0px !important;
 }
 
 .reliable-construction-subtext-wrapper {
@@ -1859,6 +2045,661 @@
         left: 20px !important;
     }
 }
+
+/* hero section */
+
+/* =========================================================
+   TOBAC HERO — PREMIUM HERITAGE HIGHLIGHTS
+   ========================================================= */
+
+.hero-quality-highlights {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 14px;
+    margin-top: 30px;
+    flex-wrap: wrap;
+}
+
+.hero-quality-item {
+    display: inline-flex;
+    align-items: center;
+    gap: 9px;
+
+    padding: 10px 18px;
+
+    border: 1px solid rgba(255, 255, 255, 0.22);
+    border-radius: 4px;
+
+    background: rgba(255, 255, 255, 0.08);
+
+    color: #ffffff;
+
+    font-size: 11px;
+    font-weight: 500;
+    letter-spacing: 1px;
+    line-height: 1;
+    white-space: nowrap;
+
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+}
+
+.hero-quality-dot {
+    width: 7px;
+    height: 7px;
+    flex: 0 0 7px;
+
+    border-radius: 50%;
+    background: #f6b61b;
+}
+
+.hero-quality-divider {
+    width: 1px;
+    height: 22px;
+    background: rgba(255, 255, 255, 0.35);
+}
+
+
+/* =========================================================
+   HERO HEADING
+   ========================================================= */
+
+.home-two-hero-section
+.hero-three-title-text {
+    max-width: 850px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+
+/* =========================================================
+   HERO DESCRIPTION
+   ========================================================= */
+
+.home-two-hero-section
+.hero-text-gap-top-bottom {
+    max-width: 650px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+
+/* =========================================================
+   TABLET
+   ========================================================= */
+
+@media (max-width: 991px) {
+
+    .hero-quality-highlights {
+        margin-top: 25px;
+        gap: 10px;
+    }
+
+    .hero-quality-item {
+        padding: 9px 14px;
+        font-size: 10px;
+    }
+
+    .hero-quality-divider {
+        height: 18px;
+    }
+
+}
+
+
+/* =========================================================
+   MOBILE
+   ========================================================= */
+
+@media (max-width: 767px) {
+
+    .home-two-hero-section
+    .hero-three-title-text {
+        max-width: 100%;
+    }
+
+    .home-two-hero-section
+    .hero-text-gap-top-bottom {
+        max-width: 92%;
+    }
+
+    .hero-quality-highlights {
+        gap: 7px;
+        margin-top: 22px;
+    }
+
+    .hero-quality-item {
+        padding: 8px 11px;
+        font-size: 9px;
+        letter-spacing: 0.6px;
+    }
+
+    .hero-quality-dot {
+        width: 5px;
+        height: 5px;
+        flex-basis: 5px;
+    }
+
+    .hero-quality-divider {
+        display: none;
+    }
+
+}
+
+
+/* =========================================================
+   SMALL MOBILE
+   ========================================================= */
+
+@media (max-width: 479px) {
+
+    .hero-quality-highlights {
+        display: grid;
+        grid-template-columns: 1fr;
+        width: 100%;
+        max-width: 280px;
+        margin-left: auto;
+        margin-right: auto;
+        gap: 6px;
+    }
+
+    .hero-quality-item {
+        justify-content: center;
+        width: 100%;
+        box-sizing: border-box;
+        padding: 9px 10px;
+        font-size: 9px;
+    }
+
+}
+
+/* =========================================================
+   TOBAC ENTERPRISES
+   PREMIUM BRAND VALUES SECTION
+   ========================================================= */
+
+.tobac-values-section {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+
+    background: #f5f2eb;
+
+    padding: 88px 0 92px;
+}
+
+
+/* ---------------------------------------------------------
+   CONTAINER
+   --------------------------------------------------------- */
+
+.tobac-values-container {
+    width: calc(100% - 80px);
+    max-width: 1200px;
+
+    margin: 0 auto;
+
+    display: grid;
+    grid-template-columns: minmax(280px, 0.72fr) minmax(0, 1.7fr);
+
+    gap: 85px;
+
+    align-items: start;
+}
+
+
+/* ---------------------------------------------------------
+   INTRO
+   --------------------------------------------------------- */
+
+.tobac-values-intro {
+    padding-top: 5px;
+}
+
+.tobac-values-eyebrow {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+
+    margin-bottom: 20px;
+
+    color: #b78519;
+
+    font-size: 11px;
+    line-height: 1;
+    font-weight: 600;
+
+    letter-spacing: 1.8px;
+    text-transform: uppercase;
+}
+
+.tobac-values-eyebrow::before {
+    content: "";
+
+    width: 28px;
+    height: 1px;
+
+    background: #c49738;
+}
+
+
+.tobac-values-intro h2 {
+    max-width: 430px;
+
+    margin: 0;
+
+    color: #151515;
+
+    font-size: 43px;
+    line-height: 1.08;
+
+    font-weight: 500;
+
+    letter-spacing: -1.5px;
+}
+
+.tobac-values-intro h2 span {
+    color: #9b6f18;
+}
+
+
+.tobac-values-intro p {
+    max-width: 390px;
+
+    margin: 25px 0 0;
+
+    color: #68645d;
+
+    font-size: 15px;
+    line-height: 1.7;
+}
+
+
+/* ---------------------------------------------------------
+   VALUE LIST
+   --------------------------------------------------------- */
+
+.tobac-values-list {
+    display: grid;
+
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+
+    border-top: 1px solid rgba(35, 29, 20, 0.20);
+}
+
+
+/* ---------------------------------------------------------
+   VALUE ITEM
+   --------------------------------------------------------- */
+
+.tobac-value-item {
+    position: relative;
+
+    min-width: 0;
+
+    padding: 25px 25px 0;
+
+    border-right: 1px solid rgba(35, 29, 20, 0.15);
+}
+
+.tobac-value-item:first-child {
+    padding-left: 0;
+}
+
+.tobac-value-item:last-child {
+    padding-right: 0;
+    border-right: 0;
+}
+
+
+/* ---------------------------------------------------------
+   TOP ROW
+   --------------------------------------------------------- */
+
+.tobac-value-top {
+    display: flex;
+
+    align-items: center;
+    justify-content: space-between;
+
+    min-height: 48px;
+}
+
+
+.tobac-value-number {
+    color: #9d8b69;
+
+    font-size: 12px;
+    font-weight: 600;
+
+    letter-spacing: 1px;
+}
+
+
+.tobac-value-icon {
+    width: 42px;
+    height: 42px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    color: #8e681e;
+
+    border: 1px solid rgba(142, 104, 30, 0.35);
+
+    border-radius: 50%;
+}
+
+.tobac-value-icon svg {
+    width: 22px;
+    height: 22px;
+}
+
+
+/* ---------------------------------------------------------
+   GOLD DIVIDER
+   --------------------------------------------------------- */
+
+.tobac-value-line {
+    width: 34px;
+    height: 2px;
+
+    margin-top: 26px;
+    margin-bottom: 24px;
+
+    background: #c49738;
+}
+
+
+/* ---------------------------------------------------------
+   TITLE
+   --------------------------------------------------------- */
+
+.tobac-value-item h3 {
+    margin: 0;
+
+    color: #171717;
+
+    font-size: 20px;
+    line-height: 1.2;
+
+    font-weight: 500;
+
+    letter-spacing: -0.4px;
+}
+
+
+/* ---------------------------------------------------------
+   DESCRIPTION
+   --------------------------------------------------------- */
+
+.tobac-value-item p {
+    min-height: 100px;
+
+    margin: 13px 0 0;
+
+    color: #706c65;
+
+    font-size: 13px;
+    line-height: 1.65;
+}
+
+
+/* ---------------------------------------------------------
+   LINK
+   --------------------------------------------------------- */
+
+.tobac-value-link {
+    display: inline-flex;
+
+    align-items: center;
+    justify-content: space-between;
+
+    width: 100%;
+
+    margin-top: 25px;
+    padding-top: 15px;
+
+    border-top: 1px solid rgba(35, 29, 20, 0.14);
+
+    color: #24211d;
+
+    font-size: 11px;
+    font-weight: 600;
+
+    letter-spacing: 0.5px;
+
+    text-decoration: none;
+
+    transition:
+        color 0.25s ease,
+        padding 0.25s ease;
+}
+
+.tobac-value-arrow {
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    width: 25px;
+    height: 25px;
+
+    border: 1px solid rgba(35, 29, 20, 0.2);
+
+    border-radius: 50%;
+
+    font-size: 13px;
+
+    transition:
+        transform 0.25s ease,
+        background-color 0.25s ease,
+        color 0.25s ease;
+}
+
+.tobac-value-link:hover {
+    color: #9a701e;
+}
+
+.tobac-value-link:hover .tobac-value-arrow {
+    transform: translate(2px, -2px);
+
+    background: #9a701e;
+
+    color: #ffffff;
+
+    border-color: #9a701e;
+}
+
+
+/* =========================================================
+   TABLET
+   ========================================================= */
+
+@media (max-width: 991px) {
+
+    .tobac-values-section {
+        padding: 70px 0 75px;
+    }
+
+    .tobac-values-container {
+        width: calc(100% - 50px);
+
+        grid-template-columns: 1fr;
+
+        gap: 50px;
+    }
+
+    .tobac-values-intro {
+        max-width: 650px;
+    }
+
+    .tobac-values-intro h2 {
+        max-width: 600px;
+
+        font-size: 38px;
+    }
+
+    .tobac-values-intro p {
+        max-width: 580px;
+    }
+
+    .tobac-value-item {
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+
+    .tobac-value-item:first-child {
+        padding-left: 0;
+    }
+
+    .tobac-value-item:last-child {
+        padding-right: 0;
+    }
+
+}
+
+
+/* =========================================================
+   MOBILE
+   ========================================================= */
+
+@media (max-width: 767px) {
+
+    .tobac-values-section {
+        padding: 55px 0 60px;
+    }
+
+    .tobac-values-container {
+        width: calc(100% - 36px);
+
+        gap: 38px;
+    }
+
+    .tobac-values-intro h2 {
+        max-width: 100%;
+
+        font-size: 32px;
+
+        line-height: 1.1;
+    }
+
+    .tobac-values-intro p {
+        margin-top: 18px;
+
+        font-size: 14px;
+        line-height: 1.65;
+    }
+
+
+    .tobac-values-list {
+        grid-template-columns: 1fr;
+
+        border-top: 1px solid rgba(35, 29, 20, 0.20);
+    }
+
+
+    .tobac-value-item,
+    .tobac-value-item:first-child,
+    .tobac-value-item:last-child {
+        padding: 22px 0;
+
+        border-right: 0;
+
+        border-bottom: 1px solid rgba(35, 29, 20, 0.15);
+    }
+
+    .tobac-value-item:last-child {
+        border-bottom: 0;
+        padding-bottom: 0;
+    }
+
+    .tobac-value-top {
+        min-height: 42px;
+    }
+
+    .tobac-value-icon {
+        width: 38px;
+        height: 38px;
+    }
+
+    .tobac-value-icon svg {
+        width: 20px;
+        height: 20px;
+    }
+
+    .tobac-value-line {
+        margin-top: 18px;
+        margin-bottom: 17px;
+    }
+
+    .tobac-value-item h3 {
+        font-size: 19px;
+    }
+
+    .tobac-value-item p {
+        min-height: auto;
+
+        max-width: 500px;
+
+        font-size: 13px;
+    }
+
+    .tobac-value-link {
+        margin-top: 18px;
+    }
+
+}
+
+
+/* =========================================================
+   SMALL MOBILE
+   ========================================================= */
+
+@media (max-width: 479px) {
+
+    .tobac-values-section {
+        padding: 45px 0 50px;
+    }
+
+    .tobac-values-container {
+        width: calc(100% - 30px);
+
+        gap: 32px;
+    }
+
+    .tobac-values-eyebrow {
+        margin-bottom: 16px;
+
+        font-size: 9px;
+        letter-spacing: 1.4px;
+    }
+
+    .tobac-values-eyebrow::before {
+        width: 22px;
+    }
+
+    .tobac-values-intro h2 {
+        font-size: 28px;
+        letter-spacing: -0.8px;
+    }
+
+    .tobac-values-intro p {
+        font-size: 13px;
+    }
+
+    .tobac-value-item h3 {
+        font-size: 18px;
+    }
+
+    .tobac-value-item p {
+        font-size: 12.5px;
+        line-height: 1.6;
+    }
+
+}
 </style>
         <link href="https://fonts.googleapis.com" rel="preconnect" />
         <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin="anonymous" />
@@ -1881,7 +2722,7 @@
             <div class="w-layout-grid header-grid-two">
 
                 <!-- LOGO -->
-                <a href="/" class="logo w-nav-brand">
+                <a href="javascript:void(0);" class="logo w-nav-brand">
                     <img
                         src="assets/images/tobaclogo.png"
                         alt="Tobac Enterprises"
@@ -1894,32 +2735,32 @@
               <nav role="navigation" class="navbar-menu w-nav-menu">
 
     <!-- Home -->
-    <a href="/" class="nav-menu w-nav-link">
+    <a href="javascript:void(0);" class="nav-menu w-nav-link">
         <div class="nav-text">Home</div>
     </a>
 
     <!-- About Us -->
-    <a href="/about-us" class="nav-menu w-nav-link">
+    <a href="javascript:void(0);" class="nav-menu w-nav-link">
         <div class="nav-text">About Us</div>
     </a>
 
     <!-- Services -->
-    <a href="/services" class="nav-menu w-nav-link">
+    <a href="javascript:void(0);" class="nav-menu w-nav-link">
         <div class="nav-text">Services</div>
     </a>
 
     <!-- Operations -->
-    <a href="/operations" class="nav-menu w-nav-link">
+    <a href="javascript:void(0);" class="nav-menu w-nav-link">
         <div class="nav-text">Operations</div>
     </a>
 
     <!-- Sustainability -->
-    <a href="/sustainability" class="nav-menu w-nav-link">
+    <a href="javascript:void(0);" class="nav-menu w-nav-link">
         <div class="nav-text">Sustainability</div>
     </a>
 
     <!-- Contact -->
-    <a href="/contact" class="nav-menu w-nav-link">
+    <a href="javascript:void(0);" class="nav-menu w-nav-link">
         <div class="nav-text">Contact</div>
     </a>
 
@@ -1963,99 +2804,359 @@
 
     </div>
 </header>
-        <section data-w-id="6b976423-c5ad-08a1-cb07-5c4fc93b4eb0" class="home-two-hero-section position-relative">
-            <div class="home-three-slider-hero-wrap home-three-slider-hero-wrap-two">
-                <div class="w-layout-blockcontainer container position-relative w-container">
-                    <div class="home-two-hero-block position-relative margin-auto text-align-center">
+        <section
+    data-w-id="6b976423-c5ad-08a1-cb07-5c4fc93b4eb0"
+    class="home-two-hero-section position-relative"
+>
+    <div class="home-three-slider-hero-wrap home-three-slider-hero-wrap-two">
+
+        <div class="w-layout-blockcontainer container position-relative w-container">
+
+            <div class="home-two-hero-block position-relative margin-auto text-align-center">
+
+                <!-- Eyebrow -->
+                <div
+                    data-w-id="80440bbe-eea0-913c-8068-e02ce68efe40"
+                    style="opacity: 0"
+                    class="home-one-button-banner one"
+                >
+                    <div
+                        data-wf--sub-heading--variant="base"
+                        class="sub-heading"
+                    >
+                        PREMIUM INDIAN TOBACCO
+                    </div>
+                </div>
+
+                <!-- Main Heading -->
+                <div class="overflow-hidden">
+                    <h1
+                        data-w-id="6b976423-c5ad-08a1-cb07-5c4fc93b4eba"
+                        style="
+                            -webkit-transform: translate3d(0, 100%, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0)
+                                rotateZ(0) skew(-19deg, 0);
+                            -moz-transform: translate3d(0, 100%, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0)
+                                rotateZ(0) skew(-19deg, 0);
+                            -ms-transform: translate3d(0, 100%, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0)
+                                rotateZ(0) skew(-19deg, 0);
+                            transform: translate3d(0, 100%, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0)
+                                rotateZ(0) skew(-19deg, 0);
+                        "
+                        class="color-white hero-three-title-text one"
+                    >
+                        Premium Indian Tobacco
+                        
+                        Leaves - Global Export
+                    </h1>
+                </div>
+
+                <!-- Description -->
+                <div class="overflow-hidden">
+                    <p
+                        data-w-id="6b976423-c5ad-08a1-cb07-5c4fc93b4ec1"
+                        style="opacity: 0"
+                        class="hero-text-gap-top-bottom color-white one"
+                    >
+                        Ethically sourced and meticulously processed tobacco
+                        leaves, delivering premium quality, consistency and
+                        reliability to global partners.
+                    </p>
+                </div>
+
+                <!-- CTA -->
+                <div class="overflow-hidden">
+                    <div
+                        data-w-id="6b976423-c5ad-08a1-cb07-5c4fc93b4ec3"
+                        style="opacity: 0"
+                        class="home-one-button-banner one"
+                    >
                         <div
-                            data-w-id="80440bbe-eea0-913c-8068-e02ce68efe40"
-                            style="opacity: 0"
-                            class="home-one-button-banner one"
+                            data-wf--button-style-one--variant="base"
+                            data-w-id="a1dfbf13-2114-c851-1b8e-eda5fda5e771"
+                            class="button-style-one-wrap overflow-hidden"
                         >
-                            <div data-wf--sub-heading--variant="base" class="sub-heading">ADVANCED TOBACCO PROCESSING</div>
-                        </div>
-                        <div class="overflow-hidden">
-                            <h1
-                                data-w-id="6b976423-c5ad-08a1-cb07-5c4fc93b4eba"
-                                style="
-                                    -webkit-transform: translate3d(0, 100%, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0)
-                                        rotateZ(0) skew(-19deg, 0);
-                                    -moz-transform: translate3d(0, 100%, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0)
-                                        rotateZ(0) skew(-19deg, 0);
-                                    -ms-transform: translate3d(0, 100%, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0)
-                                        rotateZ(0) skew(-19deg, 0);
-                                    transform: translate3d(0, 100%, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0)
-                                        skew(-19deg, 0);
-                                "
-                                class="color-white hero-three-title-text one"
-                            >
-                                Advanced Tobacco Leaf Processing & Threshing
-                            </h1>
-                        </div>
-                        <div class="overflow-hidden">
-                            <p
-                                data-w-id="6b976423-c5ad-08a1-cb07-5c4fc93b4ec1"
-                                style="opacity: 0"
-                                class="hero-text-gap-top-bottom color-white one"
-                            >
-                                Industrial-scale tobacco processing supported by advanced threshing,
-                                    controlled separation, drying, quality management and integrated
-                                    processing infrastructure.
-                            </p>
-                        </div>
-                        <div class="overflow-hidden">
-                            <div
-                                data-w-id="6b976423-c5ad-08a1-cb07-5c4fc93b4ec3"
-                                style="opacity: 0"
-                                class="home-one-button-banner one"
+                            <a
+                                href="javascript:void(0);"
+                                class="button-style-one position-relative overflow-hidden w-inline-block"
                             >
                                 <div
-                                    data-wf--button-style-one--variant="base"
-                                    data-w-id="a1dfbf13-2114-c851-1b8e-eda5fda5e771"
-                                    class="button-style-one-wrap overflow-hidden"
+                                    class="w-layout-vflex button-text-wrap position-relative overflow-hidden"
                                 >
-                                    <a
-                                        href="/service-one"
-                                        class="button-style-one position-relative overflow-hidden w-inline-block"
-                                        ><div class="w-layout-vflex button-text-wrap position-relative overflow-hidden">
-                                            <div class="button-text">Explore Our Capabilities</div>
-                                            <div class="button-text two">Explore Our Capabilities</div>
-                                        </div>
-                                        <div class="button-style-one-icon position-relative">
-                                            <img
-                                                width="8"
-                                                height="9"
-                                                alt="Kontix-home-two-innovative-building-solution-arrow-icon-webflow-ecommerce-template"
-                                                src="67ad72477c605912a4af72eb/67af1b78eef99645a9f0bfd8_Arrow%206.svg"
-                                                loading="lazy"
-                                                class="button-one-arrow"
-                                            />
-                                        </div>
-                                        <div class="button-style-one-background position-absolute"></div
-                                    ></a>
+                                    <div class="button-text">
+                                        Discover Our Heritage
+                                    </div>
+
+                                    <div class="button-text two">
+                                        Discover Our Heritage
+                                    </div>
                                 </div>
-                            </div>
+
+                                <div class="button-style-one-icon position-relative">
+                                    <img
+                                        width="8"
+                                        height="9"
+                                        alt="Discover Our Heritage"
+                                        src="67ad72477c605912a4af72eb/67af1b78eef99645a9f0bfd8_Arrow%206.svg"
+                                        loading="lazy"
+                                        class="button-one-arrow"
+                                    />
+                                </div>
+
+                                <div class="button-style-one-background position-absolute"></div>
+                            </a>
                         </div>
                     </div>
                 </div>
-                <div class="hero-three-slider-overlay">
-                    <div class="hero-three-curton one"></div>
-                    <div class="hero-three-curton two"></div>
-                    <div class="hero-three-curton three"></div>
-                    <div class="hero-three-curton four"></div>
-                    <div class="hero-three-curton five"></div>
+
+                <!-- Heritage / Quality Highlights -->
+                <div
+                    class="hero-quality-highlights"
+                    data-w-id="80440bbe-eea0-913c-8068-e02ce68efe40"
+                    style="opacity: 0"
+                >
+
+                    <div class="hero-quality-item">
+                        <span class="hero-quality-dot"></span>
+                        <span>EST. 1946</span>
+                    </div>
+
+                    <div class="hero-quality-divider"></div>
+
+                    <div class="hero-quality-item">
+                        <span class="hero-quality-dot"></span>
+                        <span>100% NATURAL</span>
+                    </div>
+
+                    <div class="hero-quality-divider"></div>
+
+                    <div class="hero-quality-item">
+                        <span class="hero-quality-dot"></span>
+                        <span>ARTISAN CURED</span>
+                    </div>
+
                 </div>
+
             </div>
-            <div
-                style="height: 0%"
-                class="w-layout-hflex inner-page-banner-line-wrap position-absolute margin-auto z-index-top"
-            >
-                <div class="inner-page-banner-lline"></div>
-                <div class="inner-page-banner-lline"></div>
-                <div class="inner-page-banner-lline"></div>
-                <div class="inner-page-banner-lline"></div>
+        </div>
+
+        <!-- Existing Webflow Curtain Animation -->
+        <div class="hero-three-slider-overlay">
+            <div class="hero-three-curton one"></div>
+            <div class="hero-three-curton two"></div>
+            <div class="hero-three-curton three"></div>
+            <div class="hero-three-curton four"></div>
+            <div class="hero-three-curton five"></div>
+        </div>
+
+    </div>
+
+    <!-- Existing Bottom Animation Lines -->
+    <div
+        style="height: 0%"
+        class="w-layout-hflex inner-page-banner-line-wrap position-absolute margin-auto z-index-top"
+    >
+        <div class="inner-page-banner-lline"></div>
+        <div class="inner-page-banner-lline"></div>
+        <div class="inner-page-banner-lline"></div>
+        <div class="inner-page-banner-lline"></div>
+    </div>
+
+</section>
+
+<!-- =========================================================
+     TOBAC ENTERPRISES
+     BRAND VALUES / HERITAGE SECTION
+     ========================================================= -->
+
+<section class="tobac-values-section">
+
+    <div class="tobac-values-container">
+
+        <!-- Intro -->
+        <div class="tobac-values-intro">
+
+            <div class="tobac-values-eyebrow">
+                WHY Tobac Enterprises
             </div>
-        </section>
+
+            <h2>
+                Quality begins with
+                <span>where it comes from.</span>
+            </h2>
+
+            <p>
+                From carefully selected tobacco leaves to controlled
+                processing, every stage is guided by consistency,
+                responsible sourcing and attention to quality.
+            </p>
+
+        </div>
+
+
+        <!-- Values -->
+        <div class="tobac-values-list">
+
+            <!-- VALUE 01 -->
+            <article class="tobac-value-item">
+
+                <div class="tobac-value-top">
+                    <span class="tobac-value-number">01</span>
+
+                    <div class="tobac-value-icon">
+                        <svg
+                            viewBox="0 0 48 48"
+                            fill="none"
+                            xmlns="http://www.w3.org/2000/svg"
+                            aria-hidden="true"
+                        >
+                            <path
+                                d="M24 39C24 39 10 31 10 18C10 11 15 7 21 9C23 10 24 12 24 14C24 12 25 10 27 9C33 7 38 11 38 18C38 31 24 39 24 39Z"
+                                stroke="currentColor"
+                                stroke-width="1.8"
+                            />
+                            <path
+                                d="M24 14V30"
+                                stroke="currentColor"
+                                stroke-width="1.8"
+                            />
+                            <path
+                                d="M24 21L31 17"
+                                stroke="currentColor"
+                                stroke-width="1.8"
+                            />
+                            <path
+                                d="M24 25L18 21"
+                                stroke="currentColor"
+                                stroke-width="1.8"
+                            />
+                        </svg>
+                    </div>
+                </div>
+
+                <div class="tobac-value-line"></div>
+
+                <h3>Heritage & Craft</h3>
+
+                <p>
+                    Rooted in tobacco-growing traditions and refined
+                    through disciplined processing practices built
+                    around consistency and care.
+                </p>
+
+                <a href="javascript:void(0);" class="tobac-value-link">
+                    <span>Our Heritage</span>
+                    <span class="tobac-value-arrow">↗</span>
+                </a>
+
+            </article>
+
+
+            <!-- VALUE 02 -->
+            <article class="tobac-value-item">
+
+                <div class="tobac-value-top">
+                    <span class="tobac-value-number">02</span>
+
+                    <div class="tobac-value-icon">
+                        <svg
+                            viewBox="0 0 48 48"
+                            fill="none"
+                            xmlns="http://www.w3.org/2000/svg"
+                            aria-hidden="true"
+                        >
+                            <circle
+                                cx="24"
+                                cy="24"
+                                r="15"
+                                stroke="currentColor"
+                                stroke-width="1.8"
+                            />
+                            <path
+                                d="M9 24H39"
+                                stroke="currentColor"
+                                stroke-width="1.8"
+                            />
+                            <path
+                                d="M24 9C28 13 30 18 30 24C30 30 28 35 24 39"
+                                stroke="currentColor"
+                                stroke-width="1.8"
+                            />
+                            <path
+                                d="M24 9C20 13 18 18 18 24C18 30 20 35 24 39"
+                                stroke="currentColor"
+                                stroke-width="1.8"
+                            />
+                        </svg>
+                    </div>
+                </div>
+
+                <div class="tobac-value-line"></div>
+
+                <h3>Responsible Sourcing</h3>
+
+                <p>
+                    Working with established agricultural networks
+                    and responsible sourcing practices to maintain
+                    dependable raw material quality.
+                </p>
+
+                <a href="javascript:void(0);" class="tobac-value-link">
+                    <span>Our Approach</span>
+                    <span class="tobac-value-arrow">↗</span>
+                </a>
+
+            </article>
+
+
+            <!-- VALUE 03 -->
+            <article class="tobac-value-item">
+
+                <div class="tobac-value-top">
+                    <span class="tobac-value-number">03</span>
+
+                    <div class="tobac-value-icon">
+                        <svg
+                            viewBox="0 0 48 48"
+                            fill="none"
+                            xmlns="http://www.w3.org/2000/svg"
+                            aria-hidden="true"
+                        >
+                            <path
+                                d="M24 8L28.2 12.2L34.1 11.5L36.5 16.9L41.5 20L39.5 25.5L41.5 31L36.5 34.1L34.1 39.5L28.2 38.8L24 43L19.8 38.8L13.9 39.5L11.5 34.1L6.5 31L8.5 25.5L6.5 20L11.5 16.9L13.9 11.5L19.8 12.2L24 8Z"
+                                stroke="currentColor"
+                                stroke-width="1.8"
+                            />
+                            <path
+                                d="M17 25L22 30L32 19"
+                                stroke="currentColor"
+                                stroke-width="1.8"
+                            />
+                        </svg>
+                    </div>
+                </div>
+
+                <div class="tobac-value-line"></div>
+
+                <h3>Premium Grade</h3>
+
+                <p>
+                    Carefully processed and quality-controlled tobacco
+                    leaves prepared to meet the consistency and
+                    performance requirements of global partners.
+                </p>
+
+                <a href="javascript:void(0);" class="tobac-value-link">
+                    <span>Explore Quality</span>
+                    <span class="tobac-value-arrow">↗</span>
+                </a>
+
+            </article>
+
+        </div>
+
+    </div>
+
+</section>
 
        <style>
     /* =========================================
@@ -2194,70 +3295,73 @@
         }
     }
 
-    /* =========================================
-       MOBILE
-       ========================================= */
+    /* =========================================================
+   WHO WE ARE — MOBILE OVERLAP FIX
+   ========================================================= */
 
-    @media (max-width: 767px) {
+@media (max-width: 767px) {
 
-        .construction-ideas {
-            padding-top: 45px !important;
-            padding-bottom: 45px !important;
-        }
-
-        .construction-ideas .construction-idea-wrapper {
-            gap: 35px !important;
-        }
-
-        .construction-ideas .construction-image-wrapper {
-            height: 380px !important;
-            max-height: 380px !important;
-        }
-
-        .construction-ideas .construction-heading {
-            font-size: 32px !important;
-            line-height: 1.12 !important;
-            letter-spacing: -0.8px !important;
-        }
-
-        .construction-ideas .construction-ideas-heading {
-            margin-top: 14px !important;
-            margin-bottom: 18px !important;
-        }
-
-        .construction-ideas .construction-text > div {
-            font-size: 15px !important;
-            line-height: 1.6 !important;
-        }
-
-        .construction-ideas .construction-right-bottom-part {
-            margin-top: 35px !important;
-        }
-
-        .construction-ideas .heading-style-h6 {
-            font-size: 14px !important;
-        }
+    .construction-ideas .construction-right-top-part {
+        width: 100% !important;
+        margin-bottom: 0 !important;
     }
 
-    @media (max-width: 479px) {
-
-        .construction-ideas .construction-image-wrapper {
-            height: 320px !important;
-            max-height: 320px !important;
-        }
-
-        .construction-ideas .construction-heading {
-            font-size: 28px !important;
-        }
-
-        .construction-ideas .construction-text > div {
-            font-size: 14px !important;
-        }
-
-        .construction-ideas .construction-right-bottom-part {
-            margin-top: 30px !important;
-        }
+    .construction-ideas .construction-text {
+        height: auto !important;
+        max-height: none !important;
+        overflow: visible !important;
+        margin-bottom: 0 !important;
     }
+
+    .construction-ideas .construction-text > div {
+        height: auto !important;
+        max-height: none !important;
+        overflow: visible !important;
+    }
+
+    .construction-ideas .construction-right-bottom-part {
+        margin-top: 32px !important;
+        padding-top: 0 !important;
+    }
+
+    .construction-ideas .construction-right-bottom-part > div {
+        margin-bottom: 28px !important;
+    }
+
+    .construction-ideas .innovation-progress-bar {
+        margin-bottom: 10px !important;
+    }
+}
+
+
+/* =========================================================
+   SMALL MOBILE
+   ========================================================= */
+
+@media (max-width: 479px) {
+
+    .construction-ideas .construction-right-top-part {
+        margin-bottom: 0 !important;
+    }
+
+    .construction-ideas .construction-text {
+        height: auto !important;
+        max-height: none !important;
+    }
+
+    .construction-ideas .construction-text > div {
+        height: auto !important;
+        max-height: none !important;
+    }
+
+    .construction-ideas .construction-right-bottom-part {
+        margin-top: 30px !important;
+    }
+
+    .construction-ideas .construction-right-bottom-part > div {
+        margin-bottom: 26px !important;
+    }
+}
 </style>
 
 
@@ -2905,7 +4009,7 @@
                                             class="button-style-one-wrap w-variant-6e2385dc-4996-d9d5-515e-70517806a760 overflow-hidden"
                                         >
                                             <a
-                                                href="/contact-one"
+                                                href="javascript:void(0);"
                                                 class="button-style-one w-variant-6e2385dc-4996-d9d5-515e-70517806a760 position-relative overflow-hidden w-inline-block"
                                                 ><div
                                                     class="w-layout-vflex button-text-wrap position-relative overflow-hidden"
@@ -2986,7 +4090,7 @@
                                             class="button-style-one-wrap w-variant-6e2385dc-4996-d9d5-515e-70517806a760 overflow-hidden"
                                         >
                                             <a
-                                                href="/contact-two"
+                                                href="javascript:void(0);"
                                                 class="button-style-one w-variant-6e2385dc-4996-d9d5-515e-70517806a760 position-relative overflow-hidden w-inline-block"
                                                 ><div
                                                     class="w-layout-vflex button-text-wrap position-relative overflow-hidden"
@@ -3056,7 +4160,7 @@
                     <a
                         data-w-id="e206662c-7fea-cc5e-dd1c-157bc41b8c2b"
                         style="opacity: 0"
-                        href="/about-one"
+                        href="javascript:void(0);"
                         class="image-card-four-one position-relative deactive overflow-hidden w-inline-block"
                         ><div class="w-layout-hflex image-card-four-main position-relative">
                             <div class="image-card-four-title-wrap">
@@ -3088,7 +4192,7 @@
                     ><a
                         data-w-id="d73ac930-d64f-a7de-82a3-dfed9906a0c5"
                         style="opacity: 0"
-                        href="/about-two"
+                        href="javascript:void(0);"
                         class="image-card-four-one position-relative deactive overflow-hidden w-inline-block"
                         ><div class="w-layout-hflex image-card-four-main position-relative">
                             <div class="image-card-four-title-wrap">
@@ -3117,7 +4221,7 @@
                     ><a
                         data-w-id="c366cb1e-9996-958e-3822-b361587c4d80"
                         style="opacity: 0"
-                        href="/about-three"
+                        href="javascript:void(0);"
                         class="image-card-four-one position-relative deactive overflow-hidden w-inline-block"
                         ><div class="w-layout-hflex image-card-four-main position-relative">
                             <div class="image-card-four-title-wrap">
@@ -3146,7 +4250,7 @@
                     ><a
                         data-w-id="468bc59b-1a3e-3a3b-da0a-bbcdec9434be"
                         style="opacity: 0"
-                        href="/about-one"
+                        href="javascript:void(0);"
                         class="image-card-four-one position-relative deactive overflow-hidden w-inline-block"
                         ><div class="w-layout-hflex image-card-four-main position-relative">
                             <div class="image-card-four-title-wrap">
@@ -3538,7 +4642,7 @@
                     id="w-node-_6afda5bf-67eb-78ae-ea2a-d26c7b63ec92-7b63ec8e"
                     class="footer-col-one"
                 >
-                    <a href="/" class="w-inline-block">
+                    <a href="javascript:void(0);" class="w-inline-block">
                         <img
                             loading="lazy"
                             src="assets/images/tobaclogo.png"
@@ -3559,7 +4663,7 @@
                     <div class="footer-col-two">
 
                         <a
-                            href="/"
+                            href="javascript:void(0);"
                             aria-current="page"
                             class="footer-menu-item footer-menu-item-text w-inline-block w--current"
                         >
@@ -3569,7 +4673,7 @@
                         </a>
 
                         <a
-                            href="/about-us"
+                            href="javascript:void(0);"
                             class="footer-menu-item w-inline-block"
                         >
                             <div class="heading-style-h6 color-white footer-menu-item-text">
@@ -3578,7 +4682,7 @@
                         </a>
 
                         <a
-                            href="/services"
+                            href="javascript:void(0);"
                             class="footer-menu-item w-inline-block"
                         >
                             <div class="heading-style-h6 color-white footer-menu-item-text">
@@ -3587,7 +4691,7 @@
                         </a>
 
                         <a
-                            href="/operations"
+                            href="javascript:void(0);"
                             class="footer-menu-item w-inline-block"
                         >
                             <div class="heading-style-h6 color-white footer-menu-item-text">
@@ -3596,7 +4700,7 @@
                         </a>
 
                         <a
-                            href="/sustainability"
+                            href="javascript:void(0);"
                             class="footer-menu-item w-inline-block"
                         >
                             <div class="heading-style-h6 color-white footer-menu-item-text">
@@ -3605,7 +4709,7 @@
                         </a>
 
                         <a
-                            href="/contact"
+                            href="javascript:void(0);"
                             class="footer-menu-item w-inline-block"
                         >
                             <div class="heading-style-h6 color-white footer-menu-item-text">
@@ -3632,7 +4736,7 @@
                     <div>
                         <span class="color-white">Email:</span>
                         <a
-                            href="mailto:YOUR-EMAIL"
+                            href="javascript:void(0);"
                             class="color-white link-footer-text heading-style-h6"
                         >
                             YOUR-EMAIL
@@ -3643,7 +4747,7 @@
                     <div class="color-white heading-style-h6">
                         Call us:
                         <a
-                            href="tel:YOUR-PHONE"
+                            href="javascript:void(0);"
                             class="color-white link-footer-text heading-style-h6"
                         >
                             YOUR PHONE
@@ -3680,7 +4784,7 @@
                         <div class="w-layout-hflex copy-right-menu">
 
                             <a
-                                href="/privacy-policy"
+                                href="javascript:void(0);"
                                 class="copy-write-menu-item w-inline-block"
                             >
                                 <div class="text-capitalize footer-menu-item-text">
@@ -3689,7 +4793,7 @@
                             </a>
 
                             <a
-                                href="/terms-and-conditions"
+                                href="javascript:void(0);"
                                 class="copy-write-menu-item remove-right-border w-inline-block"
                             >
                                 <div class="text-capitalize footer-menu-item-text">

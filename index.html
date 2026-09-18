@@ -349,6 +349,60 @@
     }
 </style>
 <style>
+
+    /* =========================================================
+   HERO HEADING — MATCH "WHY TABAC ENTERPRISES" TYPOGRAPHY
+   ========================================================= */
+
+.home-two-hero-section .hero-three-title-text {
+    font-size: 43px !important;
+    line-height: 1.08 !important;
+    font-weight: 500 !important;
+    letter-spacing: -1.5px !important;
+
+    /* Keep hero heading white */
+    color: #ffffff !important;
+
+    /* Prevent Webflow typography from overriding it */
+    font-family: inherit !important;
+
+    max-width: 700px !important;
+    margin-left: auto !important;
+    margin-right: auto !important;
+}
+
+
+/* Tablet */
+@media (max-width: 991px) {
+    .home-two-hero-section .hero-three-title-text {
+        font-size: 38px !important;
+        line-height: 1.1 !important;
+        letter-spacing: -1.2px !important;
+        max-width: 650px !important;
+    }
+}
+
+
+/* Mobile */
+@media (max-width: 767px) {
+    .home-two-hero-section .hero-three-title-text {
+        font-size: 32px !important;
+        line-height: 1.1 !important;
+        letter-spacing: -0.8px !important;
+        max-width: 100% !important;
+    }
+}
+
+
+/* Small mobile */
+@media (max-width: 479px) {
+    .home-two-hero-section .hero-three-title-text {
+        font-size: 28px !important;
+        line-height: 1.12 !important;
+        letter-spacing: -0.6px !important;
+    }
+}
+
 /* =========================================================
    Tabac ENTERPRISES
    INDUSTRIAL PROCESSING CAPABILITY
@@ -2724,7 +2778,7 @@
                 <!-- LOGO -->
                 <a href="javascript:void(0);" class="logo w-nav-brand">
                     <img
-                        src="assets/images/tobaclogo.webp"
+                        src="assets/images/tobaclogo.png"
                         alt="Tobac Enterprises"
                         loading="eager"
                         class="brand tobac-logo"
@@ -2775,14 +2829,14 @@
 
         <div class="hamburger-image-div full-width">
             <img
-                src="assets/images/tobaclogo.webp"
+                src="assets/images/tobaclogo.png"
                 loading="lazy"
                 width="300"
                 height="200"
                 alt="Tobac Enterprises"
                 srcset="
-                    assets/images/tobaclogo.webp 500w,
-                    assets/images/tobaclogo.webp 740w
+                    assets/images/tobaclogo.png 500w,
+                    assets/images/tobaclogo.png 740w
                 "
                 sizes="(max-width: 479px) 100vw, 300px"
                 class="full-width border-radius-10"
@@ -4645,7 +4699,7 @@
                     <a href="javascript:void(0);" class="w-inline-block">
                         <img
                             loading="lazy"
-                            src="assets/images/tobaclogo.webp"
+                            src="assets/images/tobaclogo.png"
                             alt="Tobac Enterprises logo"
                             style="width: 230px;"
                         />
